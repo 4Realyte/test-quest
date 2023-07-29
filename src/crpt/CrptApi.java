@@ -124,11 +124,6 @@ public class CrptApi {
     }
 
     public String createDocument(Document document, String signature) throws JsonProcessingException {
-        switch (signature) {
-            case "SOME":
-                break;
-            default:
-        }
         CreateDocumentRequest documentRequest = new CreateDocumentRequest(document, "milk", signature);
         URI uri = makeUri("/api/v3/lk/documents/create");
         HttpRequest request = HttpRequest.newBuilder()
